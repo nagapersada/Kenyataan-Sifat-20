@@ -1,0 +1,1 @@
+# Kenyataan-Sifat-20
