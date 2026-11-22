@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#071512">
+<title>Deka Sonjaya - Modern Spiritual (Mengenal Allah Melalui Sifat 20)</title>
+<script>
+window._masukLock = false;
+window.masukKajian = function(e) {
+  if (e && e.cancelable) e.preventDefault();
+  if (window._masukLock) return;
+  window._masukLock = true;
+  setTimeout(function() { window._masukLock = false; }, 350);
+
+  var op = document.getElementById('opening');
+  var mn = document.getElementById('main');
+  if (op) {
+    op.classList.remove('active');
+    op.style.display = 'none';
+  }
+  if (mn) {
+    mn.classList.add('active');
+    mn.style.display = 'flex';
+  }
+  try {
+    if (typeof window._initKajianStart === 'function') {
+      window._initKajianStart();
+    }
+  } catch (err) {}
+};
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--gold:#c9a86a;--gold2:#e8d5a8;--green:#0f2e26;--bg:#071512;--muted:#c8c0ad}
+html,body{width:100%;height:100%;height:100vh;height:100dvh;height:100svh;overflow:hidden;background:#000;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#fff;overscroll-behavior:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img{display:block;max-width:100%}
+.page{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;height:100svh;min-height:100dvh;display:none;overflow:hidden}
+.page.active{display:flex;flex-direction:column}
+
+/* ===== PEMBUKA - DIBUAT DARI KODE, BUKAN GAMBAR ===== */
+#opening{background:radial-gradient(ellipse at 50% 0%,#123a2d 0%,#071512 55%,#04100c 100%);overflow:hidden}
+.open-frame{position:absolute;inset:10px;border:1px solid rgba(201,168,106,.75);border-radius:4px;pointer-events:none;z-index:1}
+.open-frame:before{content:"";position:absolute;inset:5px;border:1px solid rgba(201,168,106,.35);border-radius:2px;pointer-events:none}
+.open-corner{position:absolute;width:42px;height:42px;border:2px solid var(--gold2);pointer-events:none;z-index:1}
+.open-corner.tl{top:10px;left:10px;border-right:none;border-bottom:none}
+.open-corner.tr{top:10px;right:10px;border-left:none;border-bottom:none}
+.open-corner.bl{bottom:10px;left:10px;border-right:none;border-top:none}
+.open-corner.br{bottom:10px;right:10px;border-left:none;border-top:none}
+.open-orn{position:absolute;font-size:34px;color:rgba(201,168,106,.25);pointer-events:none;line-height:1;z-index:1}
+.open-orn.o1{top:22px;left:22px}
+.open-orn.o2{top:22px;right:22px;transform:scaleX(-1)}
+.open-orn.o3{bottom:22px;left:22px;transform:scaleY(-1)}
+.open-orn.o4{bottom:22px;right:22px;transform:scale(-1)}
+.open-content{position:relative;z-index:2;flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(18px + env(safe-area-inset-top)) 26px calc(18px + env(safe-area-inset-bottom));gap:8px;overflow-y:auto}
+.open-top{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2)}
+@keyframes kitabIn{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes kitabShine{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes kitabGlow{0%,100%{box-shadow:0 10px 26px rgba(0,0,0,.45),0 0 0 rgba(232,213,168,0)}50%{box-shadow:0 10px 26px rgba(0,0,0,.45),0 0 22px rgba(232,213,168,.55)}}
+@keyframes mppBlink{0%,100%{opacity:1;transform:scale(1);text-shadow:0 0 10px rgba(255,228,94,.9),0 0 22px rgba(255,228,94,.55)}50%{opacity:.35;transform:scale(.97);text-shadow:0 0 2px rgba(255,228,94,.2)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.kitab-badge{display:flex;flex-direction:column;align-items:center;gap:8px;margin:8px 0 2px}
+.kitab-main{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(110deg,#c9a86a 20%,#fff6d8 38%,#e8d5a8 50%,#c9a86a 68%);background-size:200% 100%;color:#1a1408;font-weight:900;letter-spacing:.18em;font-size:13px;padding:11px 22px;border-radius:4px;border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 26px rgba(0,0,0,.45);animation:kitabIn .7s .15s ease both,kitabShine 3.2s 1.2s linear infinite,kitabGlow 2.8s 1.2s ease-in-out infinite}
+.kitab-main i{width:6px;height:6px;border-radius:50%;background:#1a1408;display:block}
+.masterpiece{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.35);border:1px solid rgba(201,168,106,.6);padding:9px 13px;border-radius:999px}
+.masterpiece b{color:var(--gold2)}
+.mpp{display:inline-block;color:#ffe45e;font-weight:900;letter-spacing:.28em;animation:mppBlink 1.15s ease-in-out infinite}
+.open-name{font-family:Georgia,serif;font-size:clamp(36px,9vw,62px);line-height:.95;font-weight:600;letter-spacing:-.02em;animation:fadeInUp .7s .45s ease both}
+.open-sub{font-size:clamp(14px,4vw,19px);letter-spacing:.28em;text-transform:uppercase;color:#f2e6c2;animation:fadeInUp .7s .55s ease both}
+.open-line{width:68px;height:1px;background:var(--gold);margin:8px 0 2px}
+.open-big{font-family:Georgia,serif;font-size:clamp(30px,8.5vw,52px);line-height:1.08;font-weight:700;color:#f5e3a8;text-shadow:0 4px 22px rgba(0,0,0,.5);animation:fadeInUp .7s .65s ease both}
+.open-big2{font-family:Georgia,serif;font-size:clamp(18px,5vw,28px);line-height:1.25;color:#fff8dc;animation:fadeInUp .7s .75s ease both}
+.open-mot{max-width:580px;font-size:clamp(13.5px,3.7vw,16.5px);line-height:1.65;color:#efe8d6;font-style:italic;margin-top:6px;animation:fadeInUp .7s .85s ease both}
+.open-important{max-width:580px;background:rgba(255,255,255,.06);border:1px solid rgba(201,168,106,.45);border-radius:12px;padding:10px 14px;font-size:clamp(12.5px,3.4vw,14.5px);line-height:1.6;color:#f5eedd;animation:fadeInUp .7s .9s ease both}
+.open-important b{color:#fff}
+.btn-enter{position:relative;z-index:99;pointer-events:auto;cursor:pointer;touch-action:manipulation;opacity:1;margin-top:10px;width:min(100%,360px);height:56px;flex:0 0 56px;border-radius:999px;background:linear-gradient(180deg,#e8d5a8,#c9a86a);color:#1a1408;font-weight:800;font-size:16px;letter-spacing:.04em;box-shadow:0 14px 30px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-enter:active{transform:scale(.98)}
+.btn-enter small{font-size:12px;font-weight:800;opacity:.75;letter-spacing:.08em}
+.open-foot{font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.72);margin-top:6px;text-transform:uppercase;animation:fadeInUp .7s 1.05s ease both}
+
+/* ===== MAIN VIEW ===== */
+#main{background:var(--bg)}
+.topbar{height:60px;flex:0 0 60px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 14px;background:rgba(15,46,38,.97);border-bottom:1px solid rgba(201,168,106,.28);z-index:20}
+.top-left{display:flex;align-items:center;gap:10px;min-width:0}
+.top-logo{width:38px;height:38px;object-fit:contain;border-radius:50%;background:#fff;padding:2px;cursor:pointer}
+.top-title{line-height:1.1;min-width:0}
+.top-title b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.top-title span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);white-space:nowrap}
+.top-kitab{font-size:10px;letter-spacing:.18em;font-weight:800;background:var(--gold);color:#1a1408;padding:5px 8px;border-radius:999px;white-space:nowrap}
+.top-actions{display:flex;gap:6px;align-items:center}
+.icon-btn{width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;font-size:18px}
+.icon-btn.active{background:var(--gold);color:#1a1408}
+.main-body{flex:1;min-height:0;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.progress{height:4px;background:rgba(255,255,255,.12);flex:0 0 4px}
+.progress i{display:block;height:100%;background:var(--gold);width:7.14%;transition:width .35s}
+.slide-meta{display:flex;align-items:center;justify-content:space-between;padding:10px 16px 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);gap:8px}
+.slide-meta span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slide-meta b{color:var(--gold2);font-size:12px;white-space:nowrap}
+.slide-wrap{flex:1;min-height:0;overflow:hidden;position:relative;touch-action:pan-y}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;overflow:hidden}
+.slide.active{display:flex}
+
+/* ===== GAMBAR SLIDE PENUH TANPA BINGKAI ===== */
+.slide-img-box{
+  width:100%;
+  height:40%;
+  flex:0 0 40%;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  margin:0;
+  background:#04100c;
+  border-bottom:1px solid rgba(201,168,106,.22);
+  overflow:hidden;
+}
+.slide-img-box img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  object-position:center center;
+  border-radius:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  cursor:zoom-in;
+}
+
+.slide-text{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:16px 18px 20px;scrollbar-width:thin}
+.slide-text h2{font-family:Georgia,serif;font-size:clamp(22px,6vw,30px);line-height:1.18;margin-bottom:8px;color:#fff8e7}
+.slide-text h3{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px}
+.slide-text p{font-size:clamp(15px,4.1vw,17px);line-height:1.75;color:#e9e4d6;margin-bottom:10px}
+.slide-text blockquote{margin:10px 0;padding:12px 14px;border-left:3px solid var(--gold);background:rgba(201,168,106,.10);border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.65;color:#f5eedd}
+.slide-text blockquote i{color:var(--gold2)}
+.slide-text ul,.slide-text ol{margin:6px 0 12px 18px;line-height:1.7;font-size:15px;color:#e9e4d6}
+.slide-text li{margin-bottom:6px}
+.slide-text b{color:#fff}
+.hl-gold{color:#ffd76a;font-weight:800}
+.hl-green{color:#7ef0a8;font-weight:800}
+.hl-blue{color:#7ec8ff;font-weight:800}
+.hl-orange{color:#ffb26b;font-weight:800}
+.hl-pink{color:#ff9ec6;font-weight:800}
+.hl-yellow{color:#ffe45e;font-weight:800}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.legend span{font-size:11px;font-weight:800;padding:5px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+
+/* ===== AUDIO PLAYER & FOOTER ===== */
+.player{flex:0 0 auto;background:#0c231d;border-top:1px solid rgba(201,168,106,.28);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.player-row{display:flex;align-items:center;gap:10px}
+.time{font-size:12px;min-width:42px;text-align:center;color:#d9d2bd;font-variant-numeric:tabular-nums}
+input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:6px;border-radius:999px;background:rgba(255,255,255,.18);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#e8d5a8;border:3px solid #0f2e26;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#e8d5a8;border:3px solid #0f2e26}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+.ctrl-group{display:flex;align-items:center;gap:8px}
+.nav-btn{height:44px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-weight:700;font-size:13px;display:flex;align-items:center;gap:6px}
+.nav-btn:disabled{opacity:.35}
+.play-btn{width:56px;height:56px;border-radius:50%;background:linear-gradient(180deg,#e8d5a8,#c9a86a);color:#1a1408;font-size:20px;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.speed-btn{height:36px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:12px;font-weight:700}
+.slide-fs-btn{height:36px;padding:0 12px;border-radius:999px;background:rgba(201,168,106,.16);border:1px solid rgba(201,168,106,.45);color:var(--gold2);font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+.slide-fs-btn:active{transform:scale(.96)}
+.audio-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:6px}
+.audio-label b{color:#fff}
+
+/* ===== FULLSCREEN SLIDE IMAGE MODAL & ZOOM (BERSIH TANPA TOMBOL/BINGKAI) ===== */
+.img-modal{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;height:100svh;z-index:100;display:none;align-items:center;justify-content:center;background:#000;overflow:hidden;touch-action:none;user-select:none;padding:0;margin:0}
+.img-modal.open{display:flex}
+.img-modal img{width:100%;height:100%;max-width:100vw;max-height:100vh;max-height:100dvh;max-height:100svh;object-fit:contain;object-position:center center;border:none;border-radius:0;box-shadow:none;background:transparent;transform-origin:center center;transition:transform .12s ease-out;cursor:zoom-in;will-change:transform}
+.img-modal img.zoomed{cursor:grab}
+.img-modal img.dragging{transition:none;cursor:grabbing}
+
+/* ===== TOC DRAWER ===== */
+.toc{position:absolute;inset:0;z-index:30;display:none;background:rgba(0,0,0,.55)}
+.toc.open{display:block}
+.toc-panel{position:absolute;right:0;top:0;bottom:0;width:min(92vw,360px);background:#0f2e26;border-left:1px solid rgba(201,168,106,.3);display:flex;flex-direction:column;overflow:hidden}
+.toc-head{padding:16px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;align-items:center}
+.toc-head b{font-family:Georgia,serif;font-size:20px}
+.toc-list{flex:1;overflow-y:auto;padding:10px}
+.toc-item{width:100%;text-align:left;display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;margin-bottom:4px}
+.toc-item.active{background:rgba(201,168,106,.16);border:1px solid rgba(201,168,106,.35)}
+.toc-num{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:12px;font-weight:800}
+.toc-item.active .toc-num{background:var(--gold);color:#1a1408}
+.toc-item span{font-size:13.5px;line-height:1.4;color:#e9e4d6}
+.toc-item small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+
+/* ===== RESPONSIVE PORTRAIT & LANDSCAPE (ANDROID, IPHONE, TAB, LAPTOP) ===== */
+@media (orientation:portrait){
+  .slide{flex-direction:column}
+  .slide-img-box{width:100%;height:38%;flex:0 0 38%;padding:0;border-bottom:1px solid rgba(201,168,106,.22);border-right:none}
+  .slide-text{padding:14px 16px 18px}
+}
+@media (orientation:landscape) and (max-height:520px){
+  .topbar{height:46px;flex-basis:46px;padding:0 10px}
+  .slide-meta{padding:5px 14px 4px;font-size:11px}
+  .slide{flex-direction:row}
+  .slide-img-box{width:46%;height:100%;flex:0 0 46%;padding:0;border-bottom:none;border-right:1px solid rgba(201,168,106,.22)}
+  .slide-text{padding:12px 16px 16px}
+  .player{padding:6px 12px calc(6px + env(safe-area-inset-bottom))}
+  .controls{margin-top:4px}
+  .play-btn{width:44px;height:44px;font-size:17px}
+  .nav-btn{height:36px;padding:0 11px;font-size:12px}
+  .speed-btn,.slide-fs-btn{height:34px;padding:0 10px;font-size:11px}
+  .audio-label{margin-top:3px;font-size:10px}
+  .open-content{justify-content:center;padding-top:10px;padding-bottom:10px;gap:4px}
+  .open-name{font-size:32px}
+  .open-big{font-size:26px}
+  .open-big2{font-size:15px}
+  .open-important,.open-mot{display:none}
+  .btn-enter{height:46px;flex:0 0 46px;margin-top:6px}
+}
+@media (orientation:landscape) and (min-height:521px){
+  .slide{flex-direction:row}
+  .slide-img-box{width:46%;height:100%;flex:0 0 46%;padding:0;border-bottom:none;border-right:1px solid rgba(201,168,106,.22)}
+  .slide-text{padding:20px 26px}
+}
+@media (min-width:900px){
+  .main-body{max-width:1180px;margin:0 auto;width:100%}
+  .slide{flex-direction:row}
+  .slide-img-box{width:48%;height:100%;flex:0 0 48%;padding:0;border-bottom:none;border-right:1px solid rgba(201,168,106,.22)}
+  .slide-text{padding:24px 32px}
+  .slide-text p{font-size:17px}
+  .player{max-width:1180px;margin:0 auto;width:100%}
+  .topbar{padding-left:22px;padding-right:22px}
+}
+@media (max-width:380px){
+  .top-kitab{display:none}
+  .nav-btn{padding:0 9px;font-size:11.5px;height:38px}
+  .play-btn{width:48px;height:48px}
+  .speed-btn,.slide-fs-btn{padding:0 8px;font-size:11px;height:34px}
+}
+@media (prefers-reduced-motion:reduce){
+  .kitab-main,.mpp{animation:none}
+}
+</style>
+</head>
+<body>
+<section id="opening" class="page active">
+  <div class="open-frame"></div>
+  <div class="open-corner tl"></div><div class="open-corner tr"></div><div class="open-corner bl"></div><div class="open-corner br"></div>
+  <div class="open-orn o1">❖</div><div class="open-orn o2">❖</div><div class="open-orn o3">❖</div><div class="open-orn o4">❖</div>
+  <div class="open-content">
+    <div class="open-top">Deka Sonjaya • Modern Spiritual</div>
+    <div class="kitab-badge">
+      <div class="kitab-main"><i></i> KAJIAN MA’RIFATULLAH • MASTERPIECE <i></i></div>
+      <div class="masterpiece">★ <b>MASTERPIECE</b> • <span class="mpp">MATERI PALING PENTING</span> ★</div>
+    </div>
+    <div class="open-name">Deka Sonjaya</div>
+    <div class="open-sub">Modern Spiritual</div>
+    <div class="open-line"></div>
+    <div class="open-big">Mengenal Allah Melalui Sifat 20</div>
+    <div class="open-big2">— Makrifatullah: Jalan Pengenalan Diri &amp;<br>Kesadaran Ilahi —</div>
+    <p class="open-mot">“Sifat Allah tidak berhingga jumlahnya, namun seluruhnya terhimpun di dalam Sifat Dua Puluh yang ditanamkan ke dalam diri manusia menuju satu sifat inti: Wujud.”</p>
+    <div class="open-important"><b>Kajian Tauhid &amp; Ma’rifat • Empat Kelompok Sifat, Ruh &amp; Raga, Wahdaniyah, hingga Bashirah.</b><br>14 Slide • Naskah Narasi Lengkap • Audio Player • Panduan Spiritual</div>
+    <button type="button" class="btn-enter" id="enterBtn" onclick="window.masukKajian(event)">Masuk <small>— Bismillah</small> &nbsp; →</button>
+    <div class="open-foot">Kajian Ma’rifatullah • 14 Slide • Full Screen</div>
+  </div>
+</section>
+
+<section id="main" class="page">
+  <header class="topbar">
+    <div class="top-left">
+      <img class="top-logo" id="logoHome" src="logo.png" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2231%22 fill=%22%230f2e26%22 stroke=%22%23c9a86a%22 stroke-width=%222%22/%3E%3Ctext x=%2232%22 y=%2239%22 font-family=%22Georgia,serif%22 font-size=%2222%22 font-weight=%22bold%22 fill=%22%23e8d5a8%22 text-anchor=%22middle%22%3EDS%3C/text%3E%3C/svg%3E';" alt="Logo - Kembali ke Pembuka" title="Kembali ke Pembuka">
+      <div class="top-title"><b>Deka Sonjaya</b><span>Modern Spiritual</span></div>
+    </div>
+    <div class="top-actions"><span class="top-kitab">SIFAT 20</span><button type="button" class="icon-btn" id="tocBtn" title="Daftar Isi">☰</button></div>
+  </header>
+
+  <div class="main-body">
+    <div class="progress"><i id="progressBar"></i></div>
+    <div class="slide-meta"><span id="slideKicker">Bagian 1 • Pengantar Makrifatullah Melalui Sifat 20</span><b id="slideCount">1 / 14</b></div>
+    <div class="slide-wrap" id="slideWrap"></div>
+    <div class="player">
+      <div class="player-row">
+        <span class="time" id="curTime">0:00</span>
+        <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Geser audio">
+        <span class="time" id="durTime">0:00</span>
+      </div>
+      <div class="controls">
+        <div class="ctrl-group"><button type="button" class="nav-btn" id="prevBtn">← Sebelumnya</button></div>
+        <div class="ctrl-group">
+          <button type="button" class="speed-btn" id="speedBtn" title="Kecepatan Audio">1x</button>
+          <button type="button" class="play-btn" id="playBtn" title="Putar / Jeda Audio">▶</button>
+          <button type="button" class="slide-fs-btn" id="slideFsBtn" title="Tampilkan Gambar Slide Layar Penuh">🖼️ Slide</button>
+        </div>
+        <div class="ctrl-group"><button type="button" class="nav-btn" id="nextBtn">Berikutnya →</button></div>
+      </div>
+      <div class="audio-label">Audio: <b id="audioLabel">slide1.mp3</b> • Geser bar untuk ke menit yang diinginkan</div>
+    </div>
+    <div class="toc" id="toc"><div class="toc-panel"><div class="toc-head"><b>Daftar Isi (14 Bagian)</b><button type="button" class="icon-btn" id="closeToc">✕</button></div><div class="toc-list" id="tocList"></div></div></div>
+  </div>
+</section>
+
+<!-- FULLSCREEN SLIDE IMAGE MODAL & ZOOM (TANPA BINGKAI & TANPA TOMBOL) -->
+<div class="img-modal" id="imgModal" role="dialog" aria-modal="true" aria-label="Gambar Slide Layar Penuh">
+  <img id="imgModalImg" src="" alt="Gambar Slide Layar Penuh">
+</div>
+
+<audio id="audio" preload="auto" playsinline></audio>
+
+<script>
+const LEGEND=`<div class="legend"><span style="color:#ffd76a">● ZAT / WUJUD MUTLAK</span><span style="color:#7ef0a8">● SALBIYAH / PENYUCIAN</span><span style="color:#7ec8ff">● MA'ANI (ZAHIR)</span><span style="color:#ff9ec6">● MAKNAWIYAH (BATIN)</span><span style="color:#ffb26b">● WAHDANIYAH / BASHIRAH</span></div>`;
+
+const slides=[
+{
+  t:"Pengantar Makrifatullah Sifat 20",
+  k:"Bagian 1 • Pengantar Makrifatullah Melalui Sifat 20",
+  h:"Pengantar Makrifatullah Melalui Sifat 20",
+  c:LEGEND+`<p>Bismillahirrahmanirrahim. Assalamualaikum warahmatullahi wabarakatuh. Salam sejahtera bagi kita semua, semoga kedamaian dan rahmat Tuhan Yang Maha Esa senantiasa menyertai langkah kita. Perkenalkan, <span class="hl-yellow">saya Deka Sonjaya</span>.</p>
+  <p>Pada kesempatan yang mulia ini, saya mengajak Bapak, Ibu, serta seluruh sahabat pembelajar untuk menyelami sebuah jalan pengenalan diri dan pengenalan kepada Sang Pencipta, yaitu <span class="hl-gold">makrifatullah melalui Sifat Dua Puluh</span>.</p>
+  <p>Sesungguhnya, sifat Allah itu teramat banyak dan tidak berhingga. Namun, agar akal dan batin manusia mampu mengenal serta memahami sifat Allah yang tidak berhingga tersebut, seluruhnya dihimpun dan ditanamkan ke dalam diri kita melalui <span class="hl-blue">Sifat Dua Puluh</span>.</p>
+  <p>Barang siapa mengenal dan memahami Sifat Dua Puluh ini dengan benar, niscaya ia akan menyadari bahwa sifat Allah yang tidak berhingga itu terangkum sepenuhnya di dalam Sifat Dua Puluh.</p>
+  <blockquote><i>Sifat Allah tidak berhingga jumlahnya, dihimpun ke dalam 20 Sifat Utama dan ditanamkan di dalam diri manusia sebagai kunci pengenalan.</i><br><b>Deka Sonjaya • Modern Spiritual</b></blockquote>`
+},
+{
+  t:"Klasifikasi 4 Kelompok Sifat",
+  k:"Bagian 2 • Klasifikasi Sifat Dua Puluh ke Dalam Empat Kelompok Sifat",
+  h:"Klasifikasi Sifat Dua Puluh ke Dalam Empat Kelompok Sifat",
+  c:LEGEND+`<p>Mari kita pelajari susunan agung dari Sifat Dua Puluh ini. Sifat Dua Puluh tersebut terhimpun ke dalam <span class="hl-gold">empat kelompok besar sifat</span>:</p>
+  <ol>
+    <li><b><span class="hl-gold">Sifat Nafsiyah</span></b> (1 Sifat — Wujud)</li>
+    <li><b><span class="hl-green">Sifat Salbiyah</span></b> (5 Sifat — Qidam, Baqa, Mukhalafatu lil Hawaditsi, Qiyamuhu Binafsihi, Wahdaniyah)</li>
+    <li><b><span class="hl-blue">Sifat Ma'ani</span></b> (7 Sifat — Sifat Zahir / Nyata)</li>
+    <li><b><span class="hl-pink">Sifat Maknawiyah</span></b> (7 Sifat — Sifat Batin / Ruh)</li>
+  </ol>
+  <p>Keempat kelompok sifat ini, yaitu Nafsiyah, Salbiyah, Ma'ani, dan Maknawiyah, pada akhirnya terhimpun kembali ke dalam <span class="hl-yellow">satu sifat inti</span> yang menjadi kesimpulan dari keseluruhan Sifat Dua Puluh, yakni sifat Nafsiyah yang berupa <b>Wujud</b>.</p>
+  <p><b>Wujud</b> artinya <i>Ada</i>. Sifat Nafsiyah adalah sifat yang berdiri dan ada dengan sendirinya; Dia ada bukan karena diadakan oleh sesuatu, melainkan <span class="hl-gold">Wajib Ada dengan sendirinya</span>.</p>`
+},
+{
+  t:"Memahami Sifat Salbiyah",
+  k:"Bagian 3 • Memahami Sifat Salbiyah",
+  h:"Memahami Sifat Salbiyah",
+  c:LEGEND+`<p>Kelompok yang kedua adalah <span class="hl-green">sifat Salbiyah</span>. Secara makna, sifat Salbiyah berfungsi menolak segala macam sifat yang tidak pantas dan tidak layak bagi Allah. Rincian dari sifat Salbiyah ini meliputi beberapa ketetapan mutlak:</p>
+  <ul>
+    <li><b><span class="hl-gold">Qidam (Terdahulu):</span></b> Tidak ada sesuatu pun yang mendahului Allah, sehingga apabila ada anggapan sesuatu yang mendahului-Nya, maka hal itu tertolak sebagai Tuhan.</li>
+    <li><b><span class="hl-green">Baqa (Kekal):</span></b> Tidak ada yang membinasakan dan tidak ada yang mematikan-Nya, sehingga Allah tidak mengenal batas kedaluwarsa.</li>
+    <li><b><span class="hl-blue">Mukhalafatu lil Hawaditsi:</span></b> Berbeda dengan segala makhluk-Nya; Dia tidak serupa dengan apa pun yang menyerupai-Nya.</li>
+    <li><b><span class="hl-yellow">Qiyamuhu Binafsihi:</span></b> Berdiri dengan diri-Nya sendiri; Allah tidak membutuhkan kompromi, tidak pernah bergantung, dan tidak bersandar kepada alam semesta maupun kepada diri kita.</li>
+  </ul>
+  <p>Apabila ada anggapan bahwa Allah bersandar pada alam atau makhluk, maka anggapan itu tertolak dengan sendirinya.</p>`
+},
+{
+  t:"Sifat Ma'ani & Maknawiyah",
+  k:"Bagian 4 • Memahami Sifat Ma'ani dan Sifat Maknawiyah",
+  h:"Memahami Sifat Ma'ani dan Sifat Maknawiyah",
+  c:LEGEND+`<p>Selanjutnya, kita masuk ke kelompok sifat yang ketiga dan keempat, yaitu <span class="hl-blue">sifat Ma'ani</span> dan <span class="hl-pink">sifat Maknawiyah</span>.</p>
+  <h3>1. Sifat Ma'ani (7 Sifat Zahir / Nyata):</h3>
+  <p>Sifat Ma'ani adalah sifat yang zahir atau sifat yang nyata manifestasinya, yang terdiri dari tujuh sifat: <b>Sama</b> yang berarti mendengar, <b>Bashar</b> yang berarti melihat, <b>Kalam</b> yang berarti berkata, <b>Ilmu</b> yang berarti mengetahui, <b>Qudrat</b> yang berarti berkuasa, <b>Iradat</b> yang berarti berkehendak, dan <b>Hayat</b> yang berarti hidup.</p>
+  <h3>2. Sifat Maknawiyah (7 Sifat Batin / Ruh):</h3>
+  <p>Sedangkan kelompok yang keempat adalah sifat Maknawiyah, yaitu sifat batin yang juga berjumlah tujuh sifat sebagai pasangan dari sifat Ma'ani: <b>Sami'un</b> yang Maha Mendengar, <b>Bashirun</b> yang Maha Melihat, <b>Mutakallimun</b> yang Maha Berkata, <b>Alimun</b> yang Maha Mengetahui, <b>Qadirun</b> yang Maha Berkuasa, <b>Muridun</b> yang Maha Berkehendak, dan <b>Hayyun</b> yang Maha Hidup.</p>
+  <p>Keempat kelompok sifat ini—Nafsiyah, Salbiyah, Ma'ani, dan Maknawiyah—seluruhnya terhimpun ke dalam sifat Nafsiyah, yakni <span class="hl-gold">Wujud</span>.</p>`
+},
+{
+  t:"Wujud Mutlak & Penyaksian",
+  k:"Bagian 5 • Wujud Mutlak dan Hakikat Penghayatan Sifat",
+  h:"Wujud Mutlak dan Hakikat Penghayatan Sifat",
+  c:LEGEND+`<p>Wujudnya Allah adalah <span class="hl-gold">wujud yang mutlak dan hakiki</span> tanpa ada satu pun pembandingnya. Siapa saja yang benar-benar mengenal, memahami, dan menyadari bahwa Allah bersifat Wujud, maka ia mengerti bahwa seluruh sifat tersebut telah terhimpun di dalam Wujud-Nya.</p>
+  <p>Jika hanya Dia yang berwujud secara hakiki, maka siapakah sejatinya yang hidup, yang melihat, yang berkata, yang mendengar, yang berkuasa, dan yang berkehendak? Tidak lain adalah <span class="hl-yellow">Dia sendiri yang Wujud</span>.</p>
+  <p>Maka, ketika seseorang mencapai tingkat penyaksian terhadap Wujud-Nya, ia memandang bahwa penglihatan, pendengaran, perkataan, dan kehidupan itu adalah manifestasi Wujud-Nya semata, hingga pandangan itu tertuju secara jernih pada <span class="hl-blue">hakikat diri sejati</span>.</p>`
+},
+{
+  t:"7 Sifat Ma'ani pada Raga",
+  k:"Bagian 6 • Penempatan Tujuh Sifat Ma'ani pada Tubuh Zahir",
+  h:"Penempatan Tujuh Sifat Ma'ani pada Tubuh Zahir",
+  c:LEGEND+`<p>Agar lebih mudah dipahami dan dibayangkan, mari kita lihat bagaimana tujuh sifat Ma'ani yang zahir dan tujuh sifat Maknawiyah yang batin bekerja di dalam diri manusia. Tujuh sifat Ma'ani merupakan <span class="hl-blue">sifat zahir yang dipertaruhkan dan dinyatakan pada tubuh fisik kita</span>:</p>
+  <ol>
+    <li><b><span class="hl-gold">Sama (Mendengar):</span></b> Dipertaruhkan Allah pada <b>kedua telinga</b> kita.</li>
+    <li><b><span class="hl-green">Bashar (Melihat):</span></b> Yang dapat dirasakan secara nyata dipertaruhkan Allah pada <b>kedua mata</b> kita.</li>
+    <li><b><span class="hl-blue">Kalam (Berkata):</span></b> Dipertaruhkan Allah pada <b>mulut dan lisan</b> kita.</li>
+    <li><b><span class="hl-pink">Ilmu (Mengetahui):</span></b> Dipertaruhkan pada <b>hati</b> kita.</li>
+    <li><b><span class="hl-orange">Qudrat (Berkuasa):</span></b> Dipertaruhkan pada <b>kekuatan tulang-belulang</b> kita.</li>
+    <li><b><span class="hl-yellow">Iradat (Berkehendak):</span></b> Dipertaruhkan pada <b>aliran darah</b> kita.</li>
+    <li><b><span class="hl-gold">Hayat (Hidup):</span></b> Dipertaruhkan pada <b>keseluruhan tubuh jasmani</b> kita.</li>
+  </ol>`
+},
+{
+  t:"7 Sifat Maknawiyah pada Ruh",
+  k:"Bagian 7 • Hembusan Tujuh Sifat Maknawiyah pada Ruh Batin",
+  h:"Hembusan Tujuh Sifat Maknawiyah pada Ruh Batin",
+  c:LEGEND+`<p>Meskipun ketujuh sifat Ma'ani telah terpasang nyata pada anggota tubuh fisik, apabila belum dimasukkan <span class="hl-pink">sifat Maknawiyah</span> ke dalamnya dan belum ditiupkan ruh, maka telinga belum mampu mendengar, mata belum mampu melihat, mulut belum mampu berkata, dan batang tubuh belum mampu hidup.</p>
+  <p>Barulah ketika tujuh sifat Maknawiyah atau ruh dimasukkan ke dalam sifat Ma'ani, seluruh fungsi kehidupan itu bekerja:</p>
+  <ul>
+    <li>Telinga baru bisa mendengar karena adanya sifat <b><span class="hl-blue">Sami'un</span></b>.</li>
+    <li>Mata baru bisa melihat karena adanya sifat <b><span class="hl-green">Bashirun</span></b>.</li>
+    <li>Mulut baru bisa berkata karena adanya sifat <b><span class="hl-orange">Mutakallimun</span></b>.</li>
+    <li>Hati baru bisa mengetahui karena adanya sifat <b><span class="hl-pink">Alimun</span></b>.</li>
+    <li>Tubuh baru memiliki kuasa karena adanya sifat <b><span class="hl-gold">Qadirun</span></b>.</li>
+    <li>Diri baru bisa berkehendak karena adanya sifat <b><span class="hl-yellow">Muridun</span></b>.</li>
+    <li>Dan raga baru bisa hidup karena adanya sifat <b><span class="hl-gold">Hayyun</span></b>.</li>
+  </ul>
+  <p>Lalu siapakah sejatinya yang Maha Hidup, Maha Berkehendak, Maha Berkuasa, Maha Mengetahui, Maha Berkata, Maha Melihat, dan Maha Mendengar itu? Tidak lain adalah <span class="hl-yellow">Allah Subhanahu wa Ta'ala</span>.</p>`
+},
+{
+  t:"Wahdaniyah & Rahmatan lil Alamin",
+  k:"Bagian 8 • Sifat Wahdaniyah dan Konsep Rahmatan lil Alamin",
+  h:"Sifat Wahdaniyah dan Konsep Rahmatan lil Alamin",
+  c:LEGEND+`<p>Empat belas sifat yang terdiri dari <span class="hl-blue">tujuh sifat Ma'ani yang zahir</span> dan <span class="hl-pink">tujuh sifat Maknawiyah yang batin</span> ini kemudian dihimpun dan disatukan oleh satu sifat yang agung, yaitu <span class="hl-orange">sifat Wahdaniyah</span>.</p>
+  <p>Sifat Wahdaniyah berfungsi menyatukan sifat yang zahir dengan sifat yang batin sehingga menjadi satu kesatuan yang utuh, berjumlah <span class="hl-gold">lima belas sifat</span>.</p>
+  <p>Lima belas sifat yang telah menyatu inilah yang disebut sebagai sifat <span class="hl-green">Rahmatan lil Alamin</span>, rahmat bagi seluruh alam semesta. Mengapa disebut rahmat bagi semesta alam? Karena hamba tersebut memandang dengan <i>Bashir</i>-nya Allah, mendengar dengan <i>Sami'</i>-nya Allah, berkata dengan <i>Mutakallim</i>-nya Allah, dan hidup dengan <i>Hayat</i>-nya Allah. Ia menjadi rahmat karena dirinya merupakan tempat pertaruhan sifat-sifat Allah.</p>
+  <blockquote><i>7 Sifat Ma'ani + 7 Sifat Maknawiyah + 1 Sifat Wahdaniyah = 15 Sifat (Rahmatan lil Alamin).</i></blockquote>`
+},
+{
+  t:"Kesatuan Zat & Sifat (Ahmad–Muhammad)",
+  k:"Bagian 9 • Kesatuan Zat dan Sifat, Hubungan Allah, Ahmad, dan Muhammad",
+  h:"Kesatuan Zat dan Sifat, Hubungan Allah, Ahmad, dan Muhammad",
+  c:LEGEND+`<p>Lima belas sifat yang disebut sebagai <span class="hl-blue">Sifat</span> ini bergantung sepenuhnya kepada <span class="hl-gold">lima sifat Zat</span>, yaitu <i>Wujud, Qidam, Baqa, Mukhalafatu lil Hawaditsi,</i> dan <i>Qiyamuhu Binafsihi</i>. Sifat bergantung kepada Zat, sementara Zat berdiri dengan sendirinya.</p>
+  <p>Lima belas sifat ini bernama <span class="hl-green">Muhammad</span>, sedangkan lima sifat Zat ini bernama <span class="hl-gold">Allah</span>. Oleh karena itu, jangan pernah memisahkan antara Allah dengan Muhammad, dan jangan menceraikan antara Sifat dengan Zat. Nyatanya Allah adalah karena Muhammad, dan zahirnya Muhammad adalah karena Allah; nyatanya Zat adalah karena Sifat, dan nyatanya Sifat adalah karena Zat.</p>
+  <p>Keduanya adalah satu kesatuan yang utuh, yang terangkum dalam makna <span class="hl-pink">Ahmad</span> sebagai diri yang batin dan <span class="hl-orange">Muhammad</span> sebagai diri yang zahir. Huruf <b>Alif</b> dan <b>Ha</b> pada lafaz <i>Ahmad</i> merujuk pada awal dan akhir lafaz <i>Allah</i>, sedangkan huruf <b>Mim</b> dan <b>Dal</b> merujuk pada awal dan akhir nama <i>Muhammad</i>. Dengan demikian, Ahmad adalah kesempurnaan penyatuan zahir dan batin; Dialah yang memuji dan Dialah pula yang dipuji.</p>`
+},
+{
+  t:"Menanggalkan Keakuan Diri",
+  k:"Bagian 10 • Menanggalkan Keakuan Diri dalam Penyembahan",
+  h:"Menanggalkan Keakuan Diri dalam Penyembahan",
+  c:LEGEND+`<p>Dalam kesadaran tauhid yang murni, <span class="hl-gold">yang memuji itulah yang dipuji, dan yang disembah itulah yang menyembah</span>, sebagaimana ketetapan batin <span class="hl-yellow"><i>Al-Hamid wal Ma'bud Wahid</i></span>.</p>
+  <p>Pemahaman ini menjaga kita agar tidak terjebak dalam keakuan diri, di mana hamba merasa bahwa dirinya sendirilah yang beribadah dan berbuat. Sebab, peringatan keras diberikan bagi orang-orang yang shalat namun merasa dirinya sendiri yang berbuat, padahal hakikat dirinya tiada.</p>
+  <p>Untuk menyelamatkan batin dari keakuan tersebut, teguhkanlah kesadaran bahwa <span class="hl-blue">diriku bukanlah diriku</span>; meskipun diriku tampak ada, keberadaan diriku bukanlah kenyataan wujud diriku sendiri, melainkan <span class="hl-gold">kenyataan wujud Allah semata</span>.</p>
+  <blockquote><i>Al-Hamid wal Ma'bud Wahid — Yang memuji itulah yang dipuji, dan yang disembah itulah yang menyembah.</i></blockquote>`
+},
+{
+  t:"Pandangan Mata Hati (Bashirah)",
+  k:"Bagian 11 • Pandangan Mata Hati atau Bashirah",
+  h:"Pandangan Mata Hati atau Bashirah",
+  c:LEGEND+`<p>Kesadaran ini membimbing cara pandang kita terhadap segala sesuatu yang tampak oleh mata. Apa pun yang dilihat dan dipandang oleh <span class="hl-orange">mata kepala</span>, janganlah berhenti hanya pada benda yang dilihat oleh mata, melainkan <span class="hl-gold">pandanglah Allah di balik segala yang dipandang tersebut</span>.</p>
+  <p>Itulah hakikat pandangan mata hati atau <span class="hl-pink">Bashirah</span>. Siapa saja yang memandang sesuatu di alam semesta ini lalu ia tidak mampu memandang Allah pada sesuatu tersebut, maka pandangannya masih terhijab oleh kelalaian. Sebab, hakikat Allah adalah meliputi segala sesuatu.</p>`
+},
+{
+  t:"Allah Meliputi Segala Sesuatu",
+  k:"Bagian 12 • Allah Meliputi Segala Sesuatu Tanpa Mengambil Tempat",
+  h:"Allah Meliputi Segala Sesuatu Tanpa Mengambil Tempat",
+  c:LEGEND+`<p>Ketika kita memahami bahwa <span class="hl-gold">Allah meliputi segala sesuatu</span>, di situlah kita menyucikan Allah dari anggapan bahwa Dia mengambil tempat tertentu. Jika ada yang mengatakan Allah bertempat di langit, di bumi, atau di dalam diri secara fisik, maka timbul pertanyaan mendasar: sebelum langit dan Arasy diciptakan, di manakah Allah berada? Mengatakan Allah mengambil tempat akan menjatuhkan pemahaman pada penyerupaan makhluk atau <span class="hl-pink">mujassimah</span>.</p>
+  <p>Allah menegaskan bahwa Dia meliputi segala sesuatu; Dia tidak terikat di Arasy, tidak terbatas di langit maupun di bumi, tidak di depan, belakang, kiri, kanan, dalam, maupun luar, melainkan <span class="hl-yellow">meliputi atas, bawah, kiri, kanan, luar, dan dalam</span>.</p>
+  <p>Tidak ada satu pun ruang dan waktu yang kosong dari liputan-Nya. Meskipun Dia berbeda dengan segala sesuatu, namun Dia nyata pada segala sesuatu karena Dialah yang menciptakan segala sesuatu sekaligus meliputi seluruh ciptaan-Nya.</p>`
+},
+{
+  t:"Analogi Benang, Kain, & Baju",
+  k:"Bagian 13 • Analogi Benang, Kain, dan Baju dalam Mengenal Hakikat",
+  h:"Analogi Benang, Kain, dan Baju dalam Mengenal Hakikat",
+  c:LEGEND+`<p>Mahasuci Allah yang menciptakan segala sesuatu dan nyata wujud-Nya pada segala sesuatu. Meskipun Dia tidak serupa dengan apa pun yang menyerupai-Nya, hakikat pandangan tauhid tetap tertuju pada Yang Satu dan tidak terpecah ke mana-mana. Ketika Dia memancarkan Nur atau cahaya, maka dialah yang bernama <span class="hl-blue">Nur, Muhammad, Adam, dan Insan</span>.</p>
+  <p>Untuk memudahkan pemahaman ini, perhatikanlah perumpamaan <span class="hl-gold">benang, kain, dan baju</span>:</p>
+  <ul>
+    <li>Apabila <b>benang</b> telah ditenun menjadi <b>kain</b>, perlukah kita mencari-cari benang lagi? Tidak perlu, karena kain itulah wujud dari benang.</li>
+    <li>Apabila <b>kain</b> tersebut telah dijahit menjadi <b>baju dan sarung</b>, perlukah kita mencari-cari kain lagi? Tidak perlu, karena ketika kita memandang baju dan sarung, sesungguhnya yang tampak adalah kain, dan di balik kain adalah benang.</li>
+  </ul>
+  <p>Demikian pula alam semesta ini adalah manifestasi <span class="hl-yellow">Nur Muhammad</span>; barang siapa memandang Nur Muhammad pada segala sesuatu, ia telah memandang tanda kebesaran Allah dan mengenal Tuhannya melalui jalan sifat-sifat-Nya.</p>`
+},
+{
+  t:"Penutup & Refleksi Kesadaran",
+  k:"Bagian 14 • Penutup dan Refleksi Kesadaran Diri",
+  h:"Penutup dan Refleksi Kesadaran Diri",
+  c:LEGEND+`<p>Bapak, Ibu, dan sahabat-sahabat sekalian yang saya hormati. Demikianlah pemaparan mendalam mengenai jalan mengenal Allah melalui <span class="hl-gold">Sifat Dua Puluh</span>, mulai dari penyatuan empat kelompok sifat menuju Wujud yang mutlak, penyelarasan sifat Ma'ani yang zahir dan Maknawiyah yang batin, hingga kesadaran pandangan mata hati yang meliputi semesta.</p>
+  <p>Semoga pemahaman ini tidak berhenti sekadar menjadi pengetahuan di dalam pikiran, melainkan meresap menjadi <span class="hl-yellow">cahaya kesadaran</span> di dalam kehidupan kita sehari-hari.</p>
+  <p>Saya <b>Deka Sonjaya</b>, terima kasih atas perhatian dan kebersamaan Anda semua.</p>
+  <blockquote><i>Wassalamualaikum warahmatullahi wabarakatuh.</i><br><b>Deka Sonjaya • Modern Spiritual</b></blockquote>`
+}
+];
+
+const opening=document.getElementById('opening'), main=document.getElementById('main'), wrap=document.getElementById('slideWrap'), toc=document.getElementById('toc'), tocList=document.getElementById('tocList');
+const audio=document.getElementById('audio'), seek=document.getElementById('seek'), curTime=document.getElementById('curTime'), durTime=document.getElementById('durTime'), playBtn=document.getElementById('playBtn'), prevBtn=document.getElementById('prevBtn'), nextBtn=document.getElementById('nextBtn'), speedBtn=document.getElementById('speedBtn'), slideFsBtn=document.getElementById('slideFsBtn'), progressBar=document.getElementById('progressBar'), slideKicker=document.getElementById('slideKicker'), slideCount=document.getElementById('slideCount'), audioLabel=document.getElementById('audioLabel');
+const imgModal=document.getElementById('imgModal'), imgModalImg=document.getElementById('imgModalImg');
+let idx=0, speeds=[1,1.25,1.5,2], speedIdx=0, isSeeking=false;
+let modalScale=1, modalX=0, modalY=0;
+
+function updateModalTransform(){
+  imgModalImg.style.transform=`translate3d(${modalX}px, ${modalY}px, 0) scale(${modalScale})`;
+  imgModalImg.classList.toggle('zoomed',modalScale>1);
+}
+function resetModalZoom(){
+  modalScale=1;
+  modalX=0;
+  modalY=0;
+  updateModalTransform();
+}
+function syncModalSlide(){
+  imgModalImg.dataset.triedBg='';
+  imgModalImg.src=`slide${idx+1}.jpg`;
+  resetModalZoom();
+}
+imgModalImg.onerror=function(){
+  if(!this.dataset.triedBg){
+    this.dataset.triedBg='1';
+    this.src='background.jpg';
+  }
+};
+function openImgModal(){
+  syncModalSlide();
+  imgModal.classList.add('open');
+}
+function closeImgModal(){
+  imgModal.classList.remove('open');
+  resetModalZoom();
+}
+
+slides.forEach((s,i)=>{
+  const el=document.createElement('article');
+  el.className='slide'+(i===0?' active':'');
+  el.dataset.i=i;
+  el.innerHTML=`<div class="slide-img-box"><img src="slide${i+1}.jpg" alt="Slide ${i+1}" onerror="if(this.dataset.triedBg){this.style.display='none';}else{this.dataset.triedBg='1';this.src='background.jpg';}"></div><div class="slide-text"><h2>${s.h}</h2>${s.c}</div>`;
+  const slideImg=el.querySelector('.slide-img-box img');
+  if(slideImg) slideImg.onclick=openImgModal;
+  wrap.appendChild(el);
+
+  const b=document.createElement('button');
+  b.type='button';
+  b.className='toc-item'+(i===0?' active':'');
+  b.innerHTML=`<span class="toc-num">${i+1}</span><span>${s.t}<small>${s.k}</small></span>`;
+  b.onclick=()=>{closeToc(); goTo(i,true);};
+  tocList.appendChild(b);
+});
+
+const slideEls=[...wrap.querySelectorAll('.slide')], tocItems=[...tocList.querySelectorAll('.toc-item')];
+function fmt(s){ if(!isFinite(s)) return '0:00'; s=Math.floor(s); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
+function render(){
+  slideEls.forEach((el,i)=>el.classList.toggle('active',i===idx));
+  tocItems.forEach((el,i)=>el.classList.toggle('active',i===idx));
+  slideKicker.textContent=slides[idx].k;
+  slideCount.textContent=(idx+1)+' / '+slides.length;
+  progressBar.style.width=((idx+1)/slides.length*100)+'%';
+  prevBtn.disabled=idx===0;
+  nextBtn.disabled=idx===slides.length-1;
+  const txt=wrap.querySelector('.slide.active .slide-text');
+  if(txt) txt.scrollTop=0;
+  if(imgModal.classList.contains('open')) syncModalSlide();
+}
+function playAudio(auto=true){
+  const file=`slide${idx+1}.mp3`;
+  if(audio.dataset.file!==file){
+    audio.src=file;
+    audio.dataset.file=file;
+    seek.value=0;
+    curTime.textContent='0:00';
+    durTime.textContent='0:00';
+  }
+  audioLabel.textContent=file;
+  audio.playbackRate=speeds[speedIdx];
+  if(auto){
+    audio.play().catch(()=>{ playBtn.textContent='▶'; });
+  }
+  playBtn.textContent='⏸';
+}
+function goTo(i, autoplay=true){ idx=Math.max(0,Math.min(slides.length-1,i)); render(); playAudio(autoplay); }
+function next(){ if(idx<slides.length-1) goTo(idx+1,true); }
+function prev(){ if(idx>0) goTo(idx-1,true); }
+
+function goFullscreen(){
+  try{
+    const el=document.documentElement;
+    if(!document.fullscreenElement && !document.webkitFullscreenElement){
+      if(el.requestFullscreen) el.requestFullscreen().catch(()=>{});
+      else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+      else if(el.msRequestFullscreen) el.msRequestFullscreen();
+    }
+  }catch(e){}
+}
+
+window._initKajianStart=function(){
+  idx=0;
+  render();
+  playAudio(true);
+  goFullscreen();
+};
+
+const enterBtn=document.getElementById('enterBtn');
+if(enterBtn){
+  enterBtn.addEventListener('touchend',function(e){ window.masukKajian(e); },{passive:false});
+}
+
+document.getElementById('logoHome').onclick=()=>{
+  audio.pause();
+  playBtn.textContent='▶';
+  closeImgModal();
+  closeToc();
+  main.classList.remove('active');
+  main.style.display='none';
+  opening.classList.add('active');
+  opening.style.display='flex';
+  window.scrollTo(0,0);
+};
+document.getElementById('tocBtn').onclick=()=>{
+  toc.classList.add('open');
+  document.getElementById('tocBtn').classList.add('active');
+  const activeToc=tocList.querySelector('.toc-item.active');
+  if(activeToc) activeToc.scrollIntoView({block:'nearest'});
+};
+function closeToc(){
+  toc.classList.remove('open');
+  document.getElementById('tocBtn').classList.remove('active');
+}
+document.getElementById('closeToc').onclick=closeToc;
+toc.onclick=(e)=>{ if(e.target===toc) closeToc(); };
+prevBtn.onclick=prev;
+nextBtn.onclick=next;
+slideFsBtn.onclick=openImgModal;
+
+let modalMoved=false, modalLastTap=0;
+imgModal.addEventListener('click',e=>{
+  if(modalMoved){ modalMoved=false; return; }
+  if(modalScale===1){
+    closeImgModal();
+  }else if(e.target===imgModal){
+    closeImgModal();
+  }
+});
+imgModalImg.addEventListener('dblclick',e=>{
+  e.stopPropagation();
+  if(modalScale>1) resetModalZoom();
+  else { modalScale=2; updateModalTransform(); }
+});
+imgModal.addEventListener('wheel',e=>{
+  e.preventDefault();
+  const delta=e.deltaY<0?0.25:-0.25;
+  modalScale=Math.max(1,Math.min(4,+(modalScale+delta).toFixed(2)));
+  if(modalScale===1){ modalX=0; modalY=0; }
+  updateModalTransform();
+},{passive:false});
+
+let isDragging=false, dragStartX=0, dragStartY=0, pinchStartDist=0, pinchStartScale=1;
+imgModal.addEventListener('mousedown',e=>{
+  modalMoved=false;
+  if(modalScale<=1) return;
+  isDragging=true;
+  imgModalImg.classList.add('dragging');
+  dragStartX=e.clientX-modalX;
+  dragStartY=e.clientY-modalY;
+});
+window.addEventListener('mousemove',e=>{
+  if(!isDragging) return;
+  modalMoved=true;
+  modalX=e.clientX-dragStartX;
+  modalY=e.clientY-dragStartY;
+  updateModalTransform();
+});
+window.addEventListener('mouseup',()=>{
+  isDragging=false;
+  imgModalImg.classList.remove('dragging');
+});
+
+imgModal.addEventListener('touchstart',e=>{
+  modalMoved=false;
+  if(e.touches.length===2){
+    isDragging=false;
+    pinchStartDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+    pinchStartScale=modalScale;
+  }else if(e.touches.length===1){
+    if(modalScale>1){
+      isDragging=true;
+      imgModalImg.classList.add('dragging');
+      dragStartX=e.touches[0].clientX-modalX;
+      dragStartY=e.touches[0].clientY-modalY;
+    }
+  }
+},{passive:true});
+imgModal.addEventListener('touchmove',e=>{
+  if(e.touches.length===2 && pinchStartDist>0){
+    e.preventDefault();
+    modalMoved=true;
+    const dist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+    modalScale=Math.max(1,Math.min(4,+(pinchStartScale*(dist/pinchStartDist)).toFixed(2)));
+    if(modalScale===1){ modalX=0; modalY=0; }
+    updateModalTransform();
+  }else if(e.touches.length===1 && isDragging && modalScale>1){
+    e.preventDefault();
+    modalMoved=true;
+    modalX=e.touches[0].clientX-dragStartX;
+    modalY=e.touches[0].clientY-dragStartY;
+    updateModalTransform();
+  }
+},{passive:false});
+imgModal.addEventListener('touchend',e=>{
+  isDragging=false;
+  pinchStartDist=0;
+  imgModalImg.classList.remove('dragging');
+  if(!modalMoved && e.changedTouches.length===1){
+    const now=Date.now();
+    if(now-modalLastTap<280){
+      e.preventDefault();
+      if(modalScale>1) resetModalZoom();
+      else { modalScale=2; updateModalTransform(); }
+      modalLastTap=0;
+    }else{
+      modalLastTap=now;
+    }
+  }
+},{passive:false});
+
+playBtn.onclick=()=>{
+  if(audio.paused){ audio.play().catch(()=>{}); playBtn.textContent='⏸'; }
+  else { audio.pause(); playBtn.textContent='▶'; }
+};
+speedBtn.onclick=()=>{
+  speedIdx=(speedIdx+1)%speeds.length;
+  audio.playbackRate=speeds[speedIdx];
+  speedBtn.textContent=speeds[speedIdx]+'x';
+};
+audio.addEventListener('timeupdate',()=>{
+  if(!isSeeking && audio.duration){
+    seek.value=(audio.currentTime/audio.duration)*100;
+    curTime.textContent=fmt(audio.currentTime);
+    durTime.textContent=fmt(audio.duration);
+  }
+});
+audio.addEventListener('loadedmetadata',()=>{ durTime.textContent=fmt(audio.duration); });
+audio.addEventListener('ended',()=>{ if(idx<slides.length-1) next(); else { playBtn.textContent='▶'; }});
+audio.addEventListener('play',()=>{ playBtn.textContent='⏸'; });
+audio.addEventListener('pause',()=>{ playBtn.textContent='▶'; });
+seek.addEventListener('input',()=>{
+  isSeeking=true;
+  if(audio.duration){
+    const v=(seek.value/100)*audio.duration;
+    curTime.textContent=fmt(v);
+  }
+});
+seek.addEventListener('change',()=>{
+  if(audio.duration){ audio.currentTime=(seek.value/100)*audio.duration; }
+  isSeeking=false;
+});
+
+let sx=0, sy=0;
+wrap.addEventListener('touchstart',e=>{ sx=e.touches[0].clientX; sy=e.touches[0].clientY; },{passive:true});
+wrap.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
+  if(Math.abs(dx)>70 && Math.abs(dy)<60){
+    if(dx<0) next(); else prev();
+  }
+},{passive:true});
+document.addEventListener('keydown',e=>{
+  if(!main.classList.contains('active')) return;
+  if(e.key==='ArrowRight') next();
+  if(e.key==='ArrowLeft') prev();
+  if(e.key===' ') { e.preventDefault(); playBtn.click(); }
+  if(e.key==='Escape') { closeImgModal(); closeToc(); }
+});
+
+render();
+</script>
+</body>
+</html>
